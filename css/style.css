@@ -6,12 +6,16 @@ body {
     background-color: #232326;
     color: #F3F2F0;
 }
+.dark .steps-item,
+.dark .social {
+    border-bottom: 1px solid #F3F2F0;
+} 
+.dark .social:first-child {
+    border-top: 1px solid #F3F2F0;
+}
+ 
 .dark .nav-link {
     color: #F3F2F0;
-}
-.light {
-    background-color: #F3F2F0;
-    color: #010101;
 }
 .dark .cirkle circle {
     fill: #D40000;
@@ -19,12 +23,25 @@ body {
 .dark .triengle path {
     fill: #FFFFFF;
 }
+.light {
+    background-color: #F3F2F0;
+    color: #010101;
+}
+.light .steps-item,
+.light .social {
+    border-bottom: 1px solid #010101;
+} 
+.light .social:first-child {
+    border-top: 1px solid #010101;
+}
+.light .social {
+    border-bottom: 1px solid #010101;
+}
 .light .cirkle circle {
     fill: #FFFFFF;
 }
 .light .triengle path {
     fill: #D40000;
-    
 }
 .light .nav-link {
     color: #010101;
@@ -132,9 +149,10 @@ header {
 .skill {
     display: flex;
     justify-content: space-between;
+    padding-top: 60px;
 }
 .skill-item {
-    flex: 0 0 24%;
+    flex: 0 0 21%;
 }
 .skill .title-h3 {
     text-transform: uppercase;
@@ -151,6 +169,8 @@ header {
     justify-content: space-between;
     align-items: center;
     line-height: 150%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .steps-title {
     font-size: 28px;
@@ -161,6 +181,8 @@ header {
 }
 .steps-deskription {
     font-size: 16px;
+    flex: 0 0 49%;
+    max-width: 49%;
 }
 .cirkle-main {
     width: 253px;
