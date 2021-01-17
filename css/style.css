@@ -27,7 +27,10 @@ body {
 .dark .tarif-description,
 .dark .tarif-item  {
     border-bottom: 1px solid #F3F2F0;
-} 
+}
+.dark .tarif-item:last-child{
+    border-bottom: none;
+}
 .dark .steps-item:first-child,
 .dark .advantages,
 .dark footer,
@@ -69,7 +72,7 @@ body {
     background: #F3F2F0;
 }
 .dark .project-img {
-    background-image: url(../img/arrow.svg);
+    background-image: url(../img/icon/Arrow\ 2.svg);
 }
 .dark form input,
 .dark .ui-selectmenu-button.ui-button,
@@ -116,6 +119,9 @@ body {
 .light .tarif-item  {
     border-bottom: 1px solid #010101;
 } 
+.light .tarif-item:last-child {
+    border-bottom: none;
+}
 .light .steps-item:first-child,
 .light .advantages,
 .light footer,
@@ -157,7 +163,7 @@ body {
     background: #010101;
 }
 .light .project-img {
-    background-image: url(../img/arrow-light.svg);
+    background-image: url(../img/icon/Arrow\ 1.svg);
 }
 .light form input,
 .light .ui-selectmenu-button.ui-button,
@@ -276,7 +282,7 @@ header {
 .nav-social .nav-item:last-child {
     padding-right: 0;
 }
-.nav-social .nav-item::before{
+.nav-info .nav-item::before{
     content: "";
     width: 1px;
     height: 24px;
@@ -293,6 +299,9 @@ header {
     padding-left: 28px;
     padding-right: 28px;
 }
+.social-item:last-child {
+    position: relative;
+}
 .nav-social .nav-link {
     font-size: 16px;
 }
@@ -301,9 +310,6 @@ header {
     justify-content: space-between;
     padding-bottom: 48px;
     margin-top: 106px;
-}
-.social-item:last-child {
-    position: relative;
 }
 .project {
     margin: 0;
@@ -389,7 +395,7 @@ header {
     top: -23px;
     z-index: 2;
 }
-.triangle-form {
+.triengle-form {
     position: absolute;
     left: -177px;
     top: 52px;
@@ -559,9 +565,6 @@ header {
 }
 .work-image {
     position: absolute;
-    left: -50px;
-    top: -50px;
-    transform: translate(50%, 50%);
     width: 100%;
     height: 315px;
     object-fit: cover;
@@ -623,6 +626,12 @@ header {
 .JQuery .tech-image {
     width: 72px;
 }
+.tech-item.JS {
+    border-top: 1px solid rgba(243, 242, 240, 0.3);
+}
+.tech-item.JQuery {
+    border-top: 1px solid rgba(243, 242, 240, 0.3);
+}
 .ui-tooltip {
     background-color: #E31B1B;
     border-color:  #E31B1B!important;
@@ -655,7 +664,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.tari-item {
+.tarif-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -664,73 +673,81 @@ header {
     height: 268px;
 }
 .tarif-title {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    padding-top: 5px;
+   font-size: 28px;
+   font-weight: 700;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   padding-top: 5px;
 }
 .tarif-title > div {
-    position: relative;
+   position: relative;
 }
 .tarif-title p {
-    position: relative;
-    z-index: 1;
+   position: relative;
+   z-index: 1;
 }
 .tarif-description {
-    font-size: 28px;
-    line-height: 150%;
-    opacity: 0.8;
-    padding-bottom: 51px;
+   font-size: 28px;
+   line-height: 150%;
+   opacity: 0.8;
+   padding-bottom: 51px;
+}
+.tarif-header {
+   padding-right: 15px;
 }
 .tarif-name {
-    font-size: 28px;
-    line-height: 150%;
-    margin-bottom: 20px;
+   font-size: 28px;
+   line-height: 150%;
+   margin-bottom: 20px;
 }
 .tarif-text {
-    font-size: 16px;
-    line-height: 150%;
-    opacity: 0.8;
+   font-size: 16px;
+   line-height: 150%;
+   opacity: 0.8;
 }
 .tarif .project {
-    display: inline-flex;
+   display: inline-flex;
 }
 .tarif-pack {
-    font-size: 16px;
-    line-height: 150%;
-    font-weight: 700;
-    margin-top: 28px;
-    margin-bottom: 27px;
+   font-size: 16px;
+   line-height: 150%;
+   font-weight: 700;
+   margin-top: 28px;
+   margin-bottom: 27px;
 }
 .tarif-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    font-size: 16px;
+   list-style-type: none;
+   padding-left: 0;
+   margin: 0;
+   font-size: 16px;
 }
 .tarif-list-item {
-    position: relative;
-    padding-left: 15px;
-    margin-bottom: 14px;
+   position: relative;
+   padding-left: 15px;
+   margin-bottom: 14px;
 }
 .tarif-list-item::before {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 100%;
-    position: absolute;
-    left: 0;
-    top: calc(50%-2px);
+   content: '';
+   display: block;
+   width: 4px;
+   height: 4px;
+   border-radius: 100%;
+   position: absolute;
+   left: 0;
+   top: calc(50% - 2px);
 }
 .tarif-price {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 150%;
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 150%;
 }
 .tarif-footer {
-    position: relative;
+   position: relative;
+}
+.tarif-footer p {
+   position: relative;
+   z-index: 1;
+   margin: 0;
 }
 .tarif-footer p {
     position: relative;
@@ -750,8 +767,8 @@ header {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    position: relative;
     line-height: 150%;
+    position: relative;
 }
 .form-title p {
     position: relative;
@@ -791,7 +808,6 @@ form label {
 form input {
     width: 100%;
     padding: 26px 20px 26px;
-    background-color:  #38383a;
     border: none;
     box-sizing: border-box;
     margin-bottom: 21px;
@@ -802,16 +818,16 @@ form input:focus {
 }
 form input[type=submit] {
     background: #D40000;
-    color: #F3F2F0;
     font-size: 16px;
-    line-height: 150%;
-    padding: 21px 0;
     font-weight: 700;
+    line-height: 150%;  
+    color: #F3F2F0;
+    padding: 21px 0;
     margin-bottom: 0;
-    transition: 0.2 ease;
+    transition: 0.2s ease;
 }
 form input[type=submit]:hover {
-    background: #ea0e00;
+    background: #EA0E00;
     cursor: pointer;
 }
 form select {
@@ -819,14 +835,13 @@ form select {
 }
 .ui-selectmenu-button.ui-button {
     width: 100%;
-    background-color: #38383a;
     color: #fff;
-    padding: 25px, 20px, 25px;
+    padding: 25px 20px 25px;
     box-sizing: border-box;
     margin-bottom: 39px;
     border-radius: 0;
 }
-.ui.button:hover, .ui.button:focus {
+.ui-button:hover, .ui-button:focus {
     border: none;
     outline: none;
 }
@@ -834,12 +849,18 @@ form select {
     color: rgba(243, 242, 240, 0.4);
     font-size: 12px;
 }
-.ui-selectmenu-menu .ui-menu .ui-menu-item{
-    padding: 10px 20x;
+.ui-selectmenu-menu .ui-menu .ui-menu-item {
+    padding: 10px 20px;
 }
 .ui-selectmenu-menu .ui-menu .ui-menu-item:hover {
     color: rgba(243, 242, 240, 1);
     padding: 10px 20px;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+    flex-wrap: wrap;
 }
 .footer-top {
     display: flex;
